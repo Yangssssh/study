@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- Copyright (c) 2007 ALICE A.I. Foundation, Inc. -->
+<!-- Last modified Seo 21, 2009, by Lichunlei -->
+
+<category>
+   <pattern>软件测试包括哪些步骤？</pattern>
+   <template>测试过程按照如下4个步骤进行，即单元测试、集成测试、确认测试和系统测试。</template>
+</category>
+
+<category>
+   <pattern>Struts2的核心是什么,体现了什么思想？</pattern>
+   <template>嗯...Struts2的核心是拦截器,基本上核心功能都是由拦截器完成,拦截器的实现体现了AOP(面向切面编程)思想</template>
+</category>
+
+<category>
+   <pattern>Struts2 如何定位action中的方法？</pattern>
+   <template>
+   可以通过以下三种方式实现哟：1.感叹号定位方法（动态方法）。2.在xml配置文件中通过配置多个action，使用action的method指定方法。3.使用通配符(*)匹配方法。</template>
+</category>
+
+<category>
+   <pattern>什么是模型驱动？</pattern>
+   <template>模型驱动？就是在实现类中实现ModelDriven<T>接口使用泛型把属性类封装起来，重写getModel()方法，然后在实现类里创建一个属性类的实例，通过这个实例拿到封装进来的值，拿返回值的时候使用工具进行值拷贝。</template>
+</category>
+
+<category>
+   <pattern>如何实现自定义拦截器？</pattern>
+   <template>通过继承MethodFilterInterceptor重写doIntercept方法指定某个方法进行拦截，或者继承AbstractInterceptor，重写intercept方法,在xml配置文件中定义自定义拦截器，然后注入到拦截器栈中，再把拦截器引用到action中。再把拦截器注入拦截器栈时配置<param>标签，使用name属性配置excludeMethods表示不拦截指定方法。在配置文件中配置includeMethods指定拦截某个方法。
+</template>
+</category>
+
+<category>
+   <pattern>什么是MVC模式？</pattern>
+   <template>
+M(模型)：除核心控制器外都属于模型，实现业务的类(service层与dao层)。
+V(视图)：result,type,dispatcher默认的(jsp，freemaker，velocity，源代码等)。
+C(控制器)：核心控制器与业务控制器。
+</template>
+</category>
+
+<category>
+   <pattern>前端页面有哪三层构成?</pattern>
+   <template>前端页面由：结构层 html、 表示层 CSS 、行为层 js构成。</template>
+</category>
+
+<category>
+   <pattern>ajax请求时如何解释json数据？</pattern>
+   <template>可以使用eval 、parse，鉴于安全性考虑，使用parse更可靠喔。</template>
+</category>
+<category>
+<pattern>交换机与路由器有什么区别？</pattern>
+   <template>1.工作所处的OSI层次不一样，交换机工作在OSI第二层数据链路层，路由器工作在OSI第三层网络层。2.寻址方式不同：交换机根据MAC地址寻址，路由器根据IP地址寻址。3.转发速不同：交换机的转发速度快，路由器转发速度相对较慢。</template>
+</category>
+
+<category>
+   <pattern>PPP协议包含哪些部分？</pattern>
+   <template>PPP协议包含这样几个部分：链路控制协议LCP；网络控制协议NCP；认证协议，最常用的包括口令验证协议PAP和挑战握手验证协议CHAP。</template>
+</category>
+
+<category>
+   <pattern>VLAN分为哪几类？</pattern>
+   <template>分两类，一是基于端口的静态VLAN；一是基于MAC地址的动态VLAN。</template>
+</category>
+
+<category>
+   <pattern>TCP/IP参考模型有哪几层？  </pattern>
+   <template>TCP/IP参考模型有：应用层、传输层、互连网层、网络接口层。</template>
+</category>
+
+<category>
+   <pattern>什么是死锁？</pattern>
+   <template>在两个或多个并发进程中，如果每个进程持有某种资源而又都等待别的进程释放它或它们现在保持着的资源，在未改变这种状态之前都不能向前推进，称这一组进程产生了死锁。通俗地讲，就是两个或多个进程被无限期地阻塞、相互等待的一种状态。</template>
+</category>
+
+<category>
+   <pattern>什么是JDBC？</pattern>
+   <template>JDBC是允许用户在不同数据库之间做选择的一个抽象层。JDBC允许开发者用JAVA写数据库应用程序，而不需要关心底层特定数据库的细节。</template>
+</category>
+
+<category>
+   <pattern>什么是数据库连接池？</pattern>
+   <template>像打开关闭数据库连接这种和数据库的交互可能是很费时的，尤其是当客户端数量增加的时候，会消耗大量的资源，成本是非常高的。可以在应用服务器启动的时候建立很多个数据库连接并维护在一个池中。连接请求由池中的连接提供。在连接使用完毕以后，把连接归还到池中，以用于满足将来更多的请求。</template>
+</category>
+
+<category>
+   <pattern>什么是Servlet？</pattern>
+   <template>Servlet是用来处理客户端请求并产生动态网页内容的Java类。Servlet主要是用来处理或者是存储HTML表单提交的数据，产生动态内容，在无状态的HTTP协议下管理状态信息。</template>
+</category>
+
+<category>
+   <pattern>什么是中断？</pattern>
+   <template>中断，是指CPU在正常运行程序的过程中，由于预先安排或发生了各种随机的内部或外部事件，使CPU中断正在运行的程序，而转到为响应的服务程序去处理。</template>
+</category>
+
+<category>
+   <pattern>实时系统的基本特性是什么？</pattern>
+   <template>实时性与可靠性。所谓“实时操作系统”，实际上是指操作系统工作时，其各种资源可以根据需要随时进行动态分配。由于各种资源可以进行动态分配，因此，其处理事务的能力较强、速度较快。 </template>
+</category>
+
+<category>
+   <pattern>什么是线程？</pattern>
+   <template>线程是进程的一个实体，是CPU调度和分派的基本单位，它是比进程更小的能独立运行的基本单位。</template>
+</category>
+
+<category>
+   <pattern>什么是进程？</pattern>
+   <template>进程是具有一定独立功能的程序关于某个数据集合上的一次运行活动，进程是系统进行资源分配和调度的一个独立单位。</template>
+</category>
+
+<category>
+   <pattern>白盒测试有几种方法？</pattern>
+   <template>总体上分为静态方法和动态方法两大类。   静态方法的关键功能是检查软件的表示和描述是否一致,没有冲突或者没有歧义；动态方法主要包括：语句覆盖、判定覆盖、条件覆盖、判定条件覆盖、条件组合覆盖、路径覆盖。</template>
+</category>
+
+<category>
+   <pattern>血液为什么是红色的？</pattern>
+   <template>因为组成它的红细胞是红色的。</template>
+</category>
+
+<category>
+   <pattern>舌头为什么能辨味道？</pattern>
+   <template>因为味觉感受器不仅长在舌头上的乳头状突起内，还分布在舌的底面和口腔内咽部、软腭等处。</template>
+</category>
+
+<category>
+   <pattern>泪水为什么是咸的？</pattern>
+   <template>因为泪水是由泪腺将血液加工制造成泪水，而我们的血液中含有盐的存在，所以泪水是咸的。</template>
+</category>
+
+<category>
+   <pattern>水果有什么好处</pattern>
+   <template>水果里富含大量维生素，可以延缓衰老、预防疾病、保养皮肤。</template>
+</category>
+
+<category>
+   <pattern>鸡蛋怎么保存？</pattern>
+   <template>大头朝上。</template>
+</category>
+
+<category>
+	<pattern>* 几点 *</pattern>
+	<template>It is <date format="h:mm a"/>.</template>
+</category>
+
+<category>
+	<pattern>你好 *</pattern>
+	<template>你好。</template>
+</category>
+
+<category>
+	<pattern>帮我推荐个洗发水</pattern>
+	<template>你的发质油性还是干性</template>
+</category>
+<category>
+	<pattern>干</pattern>
+	<that>你的发质油性还是干性</that>
+	<template>你的年龄是多少
+	<think><set name="skin">干</set></think>
+	</template>
+</category>
+<category>
+	<pattern>油</pattern>
+	<that>你的发质油性还是干性</that>
+	<template>你的年龄是多少
+	<think><set name="skin">油</set></think>
+	</template>
+</category>
+<category>
+	<pattern>11</pattern>
+	<that>你的年龄是多少</that>
+	<template>哇塞，
+        <condition name="skin" value="干">你要用小孩保湿款</condition>
+        <condition name="skin" value="油">你要用小孩控油款</condition>
+    </template>
+</category>
+<category>
+	<pattern>22</pattern>
+	<that>你的年龄是多少</that>
+	<template>哇塞，
+        <condition name="skin" value="干">你要用成人保湿款</condition>
+        <condition name="skin" value="油">你要用成人控油款</condition>
+    </template>
+</category>
+<category>
+    <pattern>我的肤质是什么</pattern>
+    <template>哇塞，
+    <condition name="skin" value="干">你的肤质是干</condition>
+    <condition name="skin" value="油">你的肤质是油</condition>
+    </template>
+</category>
+<category>
+	<pattern>WHAT</pattern>
+	<template><date format="E"/>.</template>
+</category>
+
+<category>
+	<pattern>WHAT IS TODAY *</pattern>
+	<template><date format="EEE"/>.</template>
+</category>
+
+<category>
+	<pattern>MY PHONE NUMBER IS *</pattern>
+	<template>Okay, your phone number is 
+		<set name="phone">      <star/>     </set>.
+	</template>
+</category>
+
+<category>
+	<pattern>MY NAME IS *</pattern>
+	<template><think><set name="name"><star/></set></think>hello, <get name="name"/>.</template>
+</category> 
+
+  
+<category>
+	<pattern>DO YOU REMEMBER ME</pattern>
+	<template>Your name is <get name="name"/>, seeker.</template>
+</category>
+
+<category>
+	<pattern>I CAN NOT *</pattern>
+	<template>Why can't you do <set name="it"><person/></set>?</template>
+</category>
+
+<category>
+	<pattern>MY INPUT</pattern>
+	<template> 1:<input index="1"/> 	 2:<input index="2"/> 	 3:<input index="3"/> 	 4:<input index="4"/></template>
+</category>
+
+<category>
+	<pattern>*</pattern>
+	<template>对不起，这句话太深奥了，啥意思呢?</template>
+</category>                                          
+
+
+  <!-- Greeting categories. -->
+  <category>
+    <pattern>WELCOME</pattern>
+    <template>
+      <think>
+        <system> <!-- Defines a method to create new categories from user input at run-time. -->
+          import bitoflife.chatterbean.AliceBot;
+          import bitoflife.chatterbean.Context;
+          import bitoflife.chatterbean.Graphmaster;
+          import bitoflife.chatterbean.aiml.Category;
+          import bitoflife.chatterbean.text.Transformations;
+          
+          void learn(String pattern, String template)
+          {
+            /* The "match" variable represents the current matching context. */
+            AliceBot bot = match.getCallback();
+            Context context = bot.getContext();
+            Transformations transformations = context.getTransformations();
+    
+            pattern = transformations.normalization(pattern);
+            Category category = new Category(pattern, new String[] {template});
+            Graphmaster brain = bot.getGraphmaster();
+            brain.append(category);
+          }
+        </system>
+      </think>
+      Hi ya! Welcome!
+    </template>
+  </category>
+
+  <!-- A category set to learn simple user-fed categories. -->
+  <category>
+    <pattern>* NOT *  GOOD ANSWER</pattern>
+    <template>
+       What would be a good answer?
+    </template>
+  </category>
+  <category>
+    <pattern>_</pattern>
+    <that>WHAT WOULD BE A GOOD ANSWER</that>
+    <template>
+      <system>learn("<input index="3"/>", "<input index="1"/>")</system>
+      Alright! You can ask me again to see if I got it.
+    </template>
+  </category>
+  
+   <!-- A category set to learn simple user-fed categories. -->
+  <category>
+    <pattern>* 不靠谱</pattern>
+    <template>
+       那得怎么说 你教教我
+    </template>
+  </category>
+  <category>
+    <pattern>_</pattern>
+    <that>那得怎么说 你教教我</that>
+    <template>
+      <system>learn("<input index="3"/>", "<input index="1"/>")</system>
+      嗯，我记住啦，你再问下我。看我能不能回答：）
+    </template>
+  </category>
+  
+  
+  
+</aiml>
